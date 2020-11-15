@@ -1,0 +1,11 @@
+.sidebar {
+    position: fixed;
+    width: 15px;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';
