@@ -1,0 +1,15 @@
+.sidebar {
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    margin-left: 2px;
+}
+$sidebar-width: 5rem;
+
+@media screen and (max-width: 600px) {
+    $sidebar-width: 5rem;
+}
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';
