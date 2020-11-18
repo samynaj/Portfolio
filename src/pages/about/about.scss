@@ -1,0 +1,42 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 0 auto;
+
+    h1 {
+        margin: 20px 0;
+        color: rgb(12, 128, 128);
+    }
+
+    .summary {
+        width: 60%;
+        // height: 500px;
+        .sum {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: orangered;
+        }
+    }
+    .education {
+        width: 60%;
+        h2 {
+            color: rgb(12, 128, 128);
+            font-size: 1.9rem;
+            margin: 10px 0;
+        }
+        h5 {
+            color: black;
+            font-size: 1.5rem;
+            margin: 5px 0;
+        }
+        p {
+            color: orangered;
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
