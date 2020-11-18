@@ -5,7 +5,7 @@ const Experience = () => {
     return (
         <div>
             <h1>PROFESSIONAL EXPERIENCES</h1>
-            <ParticlesBg type='lines' color="#000" num={500} bg='true'/>
+            <ParticlesBg type='polygon' color="#000" num={5} bg='true'/>
         </div>
     )
 }

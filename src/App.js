@@ -1,11 +1,6 @@
 import './App.scss';
 import Navbar from './components/nav/nav';
 import Bounce from 'react-reveal/Bounce';
-import Slide from 'react-reveal/Slide';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import MailIcon from '@material-ui/icons/Mail';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import {Switch, Route} from 'react-router-dom';
 import Home from './pages/home/home';
 import About from './pages/about/about';
@@ -19,7 +14,7 @@ function App() {
     <div className="App">
       <div className='top-nav'>
         <Bounce duration={5000}>
-          <button className='download'>Download Resume</button>
+          <a href='resume.pdf' target='_blank'><button className='download'>Download Resume</button></a>
         </Bounce>
        
           
@@ -39,22 +34,7 @@ function App() {
         <Route path='/contacts' component={Contact}/>
       </Switch>
 
-      <Slide duration={1000} bottom>
-        <div className='links'>
-            <span className='btn-links'>
-                <MailIcon/> 
-            </span>
-            <span className='btn-links'>
-                <TwitterIcon/> 
-            </span>
-            <span className='btn-links'>
-                <LinkedInIcon/>
-            </span>
-            <span className='btn-links'>
-                <GitHubIcon/>
-            </span>
-        </div>
-      </Slide>
+      
       
     </div>
   );

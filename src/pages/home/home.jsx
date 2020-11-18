@@ -1,4 +1,4 @@
-
+import sandy from '../../resources/sandy.png'
 import Tada from 'react-reveal/Tada'
 import Typewriter from 'typewriter-effect';
 import ParticlesBg from 'particles-bg'
@@ -12,7 +12,7 @@ const Home = () => {
                 <div className='welcome'>
                     <Typewriter
                         options={{
-                        strings: ['Hi, I am Sam', 'I am a software developer', 'But my parents think I can also repair wrist watches and clock just because I can operate the computer, lol!','Some of my friends think I am a hacker, imagine!!', 'So I built this site to tell everyone what I do'],
+                        strings: ['Heya, my name is Samuel.', 'I am a Software Developer.', 'I build scalable digital products.', 'Hit me up for your projects or available full time roles.'],
                         autoStart: true,
                         loop: true,
                         delay: 100,
@@ -21,12 +21,12 @@ const Home = () => {
                     />
                 </div>
                 <div className='image'>
-                    <Tada right wait={3000} duration={3000}>
-                        <img className='img' src='https://i.pinimg.com/originals/0e/5d/02/0e5d02c84eb60d4780ac3dfff2474851.png' alt='sandy'/>
+                    <Tada wait={3000} duration={3000}>
+                        <img className='img' src={sandy} alt='sandy'/>
                     </Tada>
                 </div>
             </div>
-            <ParticlesBg type='polygon' color="#000" num={5} bg='true'/>
+            <ParticlesBg type='square' color="#000" num={10} bg='true'/>
         </div>
     )
 }

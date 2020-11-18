@@ -1,19 +1,25 @@
 .root {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding: 10px 30px;
     margin: 0 auto;
 
+    .left {
+        width: 40%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     h1 {
         margin: 20px 0;
         color: rgb(12, 128, 128);
+        text-align: center;
     }
 
     .summary {
-        width: 60%;
-        // height: 500px;
+        text-align: center;
         .sum {
             font-size: 1.5rem;
             font-weight: 700;
@@ -21,7 +27,7 @@
         }
     }
     .education {
-        width: 60%;
+        text-align: center;
         h2 {
             color: rgb(12, 128, 128);
             font-size: 1.9rem;
@@ -35,6 +41,12 @@
         p {
             color: orangered;
             font-size: 1.5rem;
+        }
+    }
+    .imagediv {
+        width: 40%;
+        .mypics {
+            width: 80%;
         }
     }
 
