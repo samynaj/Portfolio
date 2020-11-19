@@ -12,10 +12,10 @@ const Home = () => {
                 <div className='welcome'>
                     <Typewriter
                         options={{
-                        strings: ['Heya, my name is Samuel.', 'I am a Software Developer.', 'I build scalable digital products.', 'Hit me up for your projects or available full time roles.'],
+                        strings: ['Hello, my name is Samuel Nnaji.', 'I am a Software Developer.', 'I build scalable digital products.', 'Plug me in for your projects or any available full time roles.'],
                         autoStart: true,
                         loop: true,
-                        delay: 100,
+                        delay: 120,
                         deleteSpeed: 60
                         }}
                     />
