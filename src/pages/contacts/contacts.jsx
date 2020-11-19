@@ -25,7 +25,7 @@ const Contact = () => {
                         </span>
                     </div>
                 </Slide>
-            <ParticlesBg type='polygon' color="#000" num={5} bg='true'/>
+            <ParticlesBg type='square' color="#000" num={10} bg='true'/>
         </div>
     )
 }
