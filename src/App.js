@@ -14,13 +14,15 @@ function App() {
   return (
     <div className="App">
       <div className='top-nav'>
-        <Bounce duration={5000}>
-          <a href={resume} target='_blank' rel='noreferrer'><button className='download'>Download Resume</button></a>
-        </Bounce>
-       
-          
-        
-        <a href='https://samynaj.hashnode.dev/' target='_blank' rel='noreferrer'> <Bounce duration={5000}><button className='blog'>Blog</button></Bounce></a>
+        <a href={resume} target='_blank' rel='noreferrer'>
+          <Bounce duration={5000}>
+            <button className='download'>Download Resume</button>
+          </Bounce>
+        </a>
+        <a href='https://samynaj.hashnode.dev/' target='_blank' rel='noreferrer'>
+          <Bounce duration={5000}><button className='blog'>Blog</button>
+          </Bounce>
+        </a>
       </div>
       <div className='nav'>
         <Bounce duration={5000}>
