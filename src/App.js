@@ -7,6 +7,7 @@ import About from './pages/about/about';
 import Experience from './pages/experience/experience';
 import Projects from './pages/projects/projects';
 import Contact from './pages/contacts/contacts';
+import resume from './resources/resume.pdf';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <div className='top-nav'>
         <Bounce duration={5000}>
-          <a href='resume.pdf' target='_blank'><button className='download'>Download Resume</button></a>
+          <a href={resume} target='_blank' rel='noreferrer'><button className='download'>Download Resume</button></a>
         </Bounce>
        
           
