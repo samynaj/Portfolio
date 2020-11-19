@@ -6,32 +6,38 @@ import ExplicitIcon from '@material-ui/icons/Explicit';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import CallIcon from '@material-ui/icons/Call';
 import { Link } from 'react-router-dom';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const Navbar = () => {
   return (
     <div className='sidebar'>
       <ProSidebar width='80px'>
         <Menu>
-          <MenuItem icon={<HomeIcon/>}>
-            Home
-            <Link to='/'/>
-          </MenuItem>
-          <MenuItem icon={<PeopleIcon/>}>
-            About
-            <Link to='/about'/>
-          </MenuItem>
-          <MenuItem icon={<ExplicitIcon/>}>
-            Experience
-            <Link to='/experience'/>
-          </MenuItem>
-          <MenuItem icon={<GitHubIcon/>}>
-            Projects
-            <Link to='/projects'/>
-          </MenuItem>
-          <MenuItem icon={<CallIcon/>}>
-            Contacts
-            <Link to='/contacts'/>
-          </MenuItem>
+          <Tooltip title='Home' placement='right'>
+            <MenuItem icon={<HomeIcon/>}>
+              <Link to='/'/>
+            </MenuItem>
+          </Tooltip>
+          <Tooltip title='About' placement='right'>
+            <MenuItem icon={<PeopleIcon/>}>
+              <Link to='/about'/>
+            </MenuItem>
+          </Tooltip>
+          <Tooltip title='Experience' placement='right'>
+            <MenuItem icon={<ExplicitIcon/>}>
+              <Link to='/experience'/>
+            </MenuItem>
+          </Tooltip>
+          <Tooltip title='Projects' placement='right'>
+            <MenuItem icon={<GitHubIcon/>}>
+              <Link to='/projects'/>
+            </MenuItem>
+          </Tooltip>
+          <Tooltip title='Contacts' placement='right'>
+            <MenuItem icon={<CallIcon/>}>
+              <Link to='/contacts'/>
+            </MenuItem>
+          </Tooltip>
         </Menu>
       </ProSidebar>
     </div>
