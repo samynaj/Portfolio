@@ -1,54 +1,74 @@
 .root {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 30px;
-    margin: 0 auto;
+    flex-direction: column;
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 40px;
+        margin: 50px auto;
+        margin-top: 300px;
 
-    .left {
-        width: 40%;
+        .left {
+            width: 40%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin: 20px 0;
+            color: rgb(12, 128, 128);
+            text-align: center;
+        }
+
+        .summary {
+            text-align: center;
+            .sum {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: orangered;
+            }
+        }
+        .education {
+            text-align: center;
+            h2 {
+                color: rgb(12, 128, 128);
+                font-size: 1.9rem;
+                margin: 10px 0;
+            }
+            h5 {
+                color: black;
+                font-size: 1.5rem;
+                margin: 5px 0;
+            }
+            p {
+                color: orangered;
+                font-size: 1.5rem;
+            }
+        }
+        .imagediv {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            .mypics {
+                width: 80%;
+            }
+        }
+
+    }
+    .bottom {
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-    }
-    h1 {
-        margin: 20px 0;
-        color: rgb(12, 128, 128);
-        text-align: center;
-    }
+        margin: 50px auto;
+        width: 80%;
+        font-size: 1rem;
 
-    .summary {
-        text-align: center;
-        .sum {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: orangered;
+        progress {
+            width: 70%;
         }
     }
-    .education {
-        text-align: center;
-        h2 {
-            color: rgb(12, 128, 128);
-            font-size: 1.9rem;
-            margin: 10px 0;
-        }
-        h5 {
-            color: black;
-            font-size: 1.5rem;
-            margin: 5px 0;
-        }
-        p {
-            color: orangered;
-            font-size: 1.5rem;
-        }
-    }
-    .imagediv {
-        width: 40%;
-        .mypics {
-            width: 80%;
-        }
-    }
-
 }
+
 
