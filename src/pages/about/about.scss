@@ -8,7 +8,7 @@
         align-items: center;
         padding: 30px 40px;
         margin: 50px auto;
-        margin-top: 300px;
+        margin-top: 500px;
 
         .left {
             width: 40%;
@@ -60,13 +60,18 @@
     .bottom {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin: 50px auto;
+        justify-content: space-between;
+        margin: 20px auto;
         width: 80%;
+        height: 50%;
         font-size: 1rem;
 
+        h2 {
+            color: rgb(12, 128, 128);
+        }
         progress {
             width: 70%;
+            margin-bottom: 3rem;
         }
     }
 }

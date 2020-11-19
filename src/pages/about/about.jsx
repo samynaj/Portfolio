@@ -41,6 +41,10 @@ const About = () => {
                 <progress id='com' value='85' max='100'></progress>
                 <label for='team'>Team Player: </label>
                 <progress id='team' value='83' max='100'></progress>
+                <label for='team'>Innovation: </label>
+                <progress id='team' value='83' max='100'></progress>
+                <label for='team'>Attention to detail: </label>
+                <progress id='team' value='83' max='100'></progress>
             </div>
             <ParticlesBg type='square' color="#00" num={10} bg='true'/>
         </div>
