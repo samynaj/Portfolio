@@ -10,11 +10,20 @@
         margin: 50px auto;
         margin-top: 500px;
 
+        @media screen and (max-width: 800px){
+            flex-direction: column;
+            margin-top: 900px;
+            width: 100%;
+        }
+
         .left {
             width: 40%;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            @media screen and (max-width: 800px){
+                width: 80vw;
+            }
         }
         h1 {
             margin: 20px 0;
@@ -26,7 +35,6 @@
             text-align: center;
             .sum {
                 font-size: 1.5rem;
-                font-weight: 700;
                 color: orangered;
             }
         }
@@ -51,8 +59,11 @@
             width: 40%;
             display: flex;
             justify-content: center;
+            @media screen and (max-width: 800px){
+                width: 80vw;
+            }
             .mypics {
-                width: 80%;
+                width: 90%;
             }
         }
 
@@ -65,13 +76,17 @@
         width: 80%;
         height: 50%;
         font-size: 1rem;
+        
 
         h2 {
             color: rgb(12, 128, 128);
         }
         progress {
-            width: 70%;
+            width: 80%;
             margin-bottom: 3rem;
+            @media screen and (max-width: 800px){
+                width: 90%;
+            }
         }
     }
 }
