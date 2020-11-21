@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className='sidebar'>
       <ProSidebar width='80px'>
-        <Menu>
+        <Menu className='menu'>
           <Tooltip title='Home' placement='right'>
             <MenuItem icon={<HomeIcon/>}>
               <Link to='/'/>
