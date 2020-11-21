@@ -36,15 +36,26 @@ const About = () => {
                 </div>    
             </div>
             <div className='bottom'>
-                <h2>SKILLS</h2>
-                <label for='com'>Communication: </label>
-                <progress id='com' value='90' max='100'></progress>
-                <label for='team'>Team Player: </label>
-                <progress id='team' value='97' max='100'></progress>
-                <label for='inno'>Innovation: </label>
-                <progress id='inno' value='91' max='100'></progress>
-                <label for='atd'>Attention to detail: </label>
-                <progress id='atd' value='94' max='100'></progress>
+                <Slide right duration={3000}>
+                    <h2>SKILLS</h2>
+                </Slide>
+                <Slide right duration={3000}>
+                    <label for='com'>Communication: </label>
+                    <progress id='com' value='90' max='100'></progress>
+                </Slide>
+                <Slide right duration={4000}>
+                    <label for='team'>Team Player: </label>
+                    <progress id='team' value='97' max='100'></progress>
+                </Slide>
+                <Slide right duration={5000}>
+                    <label for='inno'>Innovation: </label>
+                    <progress id='inno' value='91' max='100'></progress>
+                </Slide>
+                <Slide right duration={6000}>
+                    <label for='atd'>Attention to detail: </label>
+                    <progress id='atd' value='94' max='100'></progress>
+                </Slide>
+                
             </div>
             <ParticlesBg type='square' color="#00" num={10} bg='true'/>
         </div>
