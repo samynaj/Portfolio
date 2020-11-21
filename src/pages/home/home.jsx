@@ -9,17 +9,27 @@ const Home = () => {
     return (
         <div>
             <div className='welcome-msg'>
-                <div className='welcome'>
-                    <Typewriter
-                        options={{
-                        strings: ['Hello, my name is Samuel Nnaji.', 'I am a Software Developer.', 'I build scalable digital products.', 'Plug me in for your projects or any available full time roles.'],
-                        autoStart: true,
-                        loop: true,
-                        delay: 120,
-                        deleteSpeed: 60
-                        }}
-                    />
+                <div className='welcome-msg__left'>
+                    <div className='msg-top'>
+                        <h1 className='name'>Hi, I am Samuel Nnaji.</h1>
+                    </div>
+                    
+                    <div className='welcome'>
+                        <Typewriter
+                            options={{
+                            strings: ['I am a Full Stack Software Developer.', 'I build scalable digital products.'],
+                            autoStart: true,
+                            loop: true,
+                            delay: 120,
+                            deleteSpeed: 60
+                            }}
+                        />
+                    </div>
+                    <div className='msg-bottom'>
+                        <p>Plug me in for your projects or any available full time roles.</p>
+                    </div>
                 </div>
+                
                 <div className='image'>
                     <Tada wait={3000} duration={3000}>
                         <img className='img' src={sandy} alt='sandy'/>

@@ -1,14 +1,24 @@
 .welcome-msg {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            color: rgb(12, 128, 128);
+        }
+    }
 }
 .welcome {
-    width: 45%;
+    width: 17rem;
+    height: 4rem;
 }
 .Typewriter__wrapper, .Typewriter__cursor {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 .img {
     max-width: 100%;
