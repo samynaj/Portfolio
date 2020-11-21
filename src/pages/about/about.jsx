@@ -38,13 +38,13 @@ const About = () => {
             <div className='bottom'>
                 <h2>SKILLS</h2>
                 <label for='com'>Communication: </label>
-                <progress id='com' value='85' max='100'></progress>
+                <progress id='com' value='90' max='100'></progress>
                 <label for='team'>Team Player: </label>
-                <progress id='team' value='83' max='100'></progress>
-                <label for='team'>Innovation: </label>
-                <progress id='team' value='91' max='100'></progress>
-                <label for='team'>Attention to detail: </label>
-                <progress id='team' value='87' max='100'></progress>
+                <progress id='team' value='97' max='100'></progress>
+                <label for='inno'>Innovation: </label>
+                <progress id='inno' value='91' max='100'></progress>
+                <label for='atd'>Attention to detail: </label>
+                <progress id='atd' value='94' max='100'></progress>
             </div>
             <ParticlesBg type='square' color="#00" num={10} bg='true'/>
         </div>
