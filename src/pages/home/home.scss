@@ -2,11 +2,12 @@
     width: 90%;
     display: flex;
     justify-content: center;
+    margin-top: 10rem;
     padding: 0 4rem;
 
     @media screen and (max-width: 800px) {
         flex-direction: column;
-        margin-top: -2rem;
+        margin-top: 4rem;
         width: 80%;
     }
 
@@ -17,6 +18,10 @@
 
         h1 {
             color: rgb(12, 128, 128);
+        }
+
+        p {
+            color: orangered;
         }
     }
 }
