@@ -2,15 +2,18 @@
     width: 90%;
     display: flex;
     justify-content: center;
-    padding: 0 2.5rem;
+    padding: 0 4rem;
 
     @media screen and (max-width: 800px) {
         flex-direction: column;
+        margin-top: -2rem;
+        width: 80%;
     }
 
     &__left {
         display: flex;
         flex-direction: column;
+        text-align: center;
 
         h1 {
             color: rgb(12, 128, 128);
@@ -18,12 +21,12 @@
     }
 }
 .welcome {
-    width: 17rem;
     height: 4rem;
 }
 .Typewriter__wrapper, .Typewriter__cursor {
     font-size: 1.5rem;
     font-weight: 400;
+    
 }
 .img {
     max-width: 100%;
