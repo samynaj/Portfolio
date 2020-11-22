@@ -17,7 +17,7 @@ const Home = () => {
                     <div className='welcome'>
                         <Typewriter
                             options={{
-                            strings: ['I am a Full Stack Software Developer.', 'I build scalable digital products.'],
+                            strings: ['A Full Stack Software Developer.', 'I build scalable digital products.'],
                             autoStart: true,
                             loop: true,
                             delay: 120,
