@@ -7,7 +7,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const Contact = () => {
     return (
-        <div>
+        <div className='root'>
             <h1>WANT TO HIRE ME</h1>
                 <Slide duration={1000} bottom>
                     <div className='links'>
