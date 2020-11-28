@@ -1,4 +1,5 @@
 import ParticlesBg from 'particles-bg';
+import './projects.scss'
 
 
 const Projects = () => {
