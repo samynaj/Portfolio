@@ -11,8 +11,9 @@
   .top-nav {
     width: 20%;
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 20px;
+    right: 2rem;
     justify-content: space-around;
     justify-self: flex-end;
 
