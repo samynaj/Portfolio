@@ -1,16 +1,23 @@
 .sidebar {
-    height: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 1.5rem;
-    margin-left: 2px;
+    width: 100%;
+    
+    .toolbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    img {
+        width: 45px;
+        margin-left: 1rem;
+        @media screen and (max-width: 800px){
+            margin-left: 0;
+        }
+    }
 
+    .nav-buttons {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        color: #00c2cb;
+    }
 }
-$sidebar-width: 5rem;
-$sidebar-bg-color: transparent;
-$sidebar-color: #000;
-$highlight-color: orangered;
 
-
-@import '~react-pro-sidebar/dist/scss/styles.scss';
