@@ -1,5 +1,4 @@
-import ParticlesBg from 'particles-bg';
-// import Slide from 'react-reveal/Slide';
+import Slide from 'react-reveal/Slide';
 import TwitterIcon from '@material-ui/icons/Twitter';
 // import MailIcon from '@material-ui/icons/Mail';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -26,10 +25,13 @@ const Contact = () => {
           });
       }
     return (
-        <div className='root'>
-            <h1>WANT TO HIRE ME</h1>
+        <div id='contact'>
+            <Slide top duration={2000}>
+                <h1>Contact Me</h1>
+            </Slide>
+            
             <div className='contact'>
-                <form className='contact-form' onSubmit={sendEmail}>
+                <form className='contact-form' onSubmit={sendEmail} autoComplete="off">
                     <input type="text" name="user_name" placeholder='Full Name' className='contact-form-input'/>
                     <input type="email" name="user_email" placeholder='Email Address' className='contact-form-input'/>
                     <input type="text" name="subject" placeholder='Subject' className='contact-form-input'/>
@@ -50,7 +52,7 @@ const Contact = () => {
                 </span>
             </div>
             
-            <ParticlesBg type='square' color="#000" num={10} bg='true'/>
+            
         </div>
     )
 }
