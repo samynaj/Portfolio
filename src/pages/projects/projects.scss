@@ -1,6 +1,49 @@
-.root {
-    margin-top: 5rem;
+#projects {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #111822;
+    width: 100%;
+    padding-top: 4rem;
+    @media screen and (max-width: 800px) {
+        padding-top: 1rem;
+    }
+    .head {
+       text-align: center;
+    }
+    h1 {
+        color: #00c2cb;
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 300;
+        @media screen and (max-width: 800px) {
+            padding: 1rem;
+        }
+    }
+    .cards {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media screen and (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        h2 {
+            color: #ff5757;
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-align: left;
+            font-weight: 300;
+        }
+        p {
+            color: #fff;
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-align: left;
+            font-weight: 300;
+        }
+    }
 
     
 }
