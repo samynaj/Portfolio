@@ -1,11 +1,10 @@
 import Slide from 'react-reveal/Slide';
 import TwitterIcon from '@material-ui/icons/Twitter';
-// import MailIcon from '@material-ui/icons/Mail';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import './contact.scss';
 import emailjs from 'emailjs-com';
-// const { REACT_APP_MY_SERVICE_ID, REACT_APP_MY_TEMPLATE_ID, REACT_APP_MY_USER_ID } = process.env.;
+import Link from '@material-ui/core/Link';
 
 const Contact = () => {
     function sendEmail(e) {
@@ -42,13 +41,19 @@ const Contact = () => {
             
             <div className='links'>
                 <span>
-                    <TwitterIcon size='md' className='btn-links'/> 
+                    <Link href="https://twitter.com/yoh_samynaj" >
+                        <TwitterIcon size='md' className='btn-links'/> 
+                    </Link>
                 </span>
                 <span>
-                    <LinkedInIcon className='btn-links'/>
+                    <Link href="https://www.linkedin.com/in/samuel-nnaji/" >
+                        <LinkedInIcon className='btn-links'/>
+                    </Link>
                 </span>
                 <span>
-                    <GitHubIcon className='btn-links'/>
+                    <Link href="https://github.com/samynaj">
+                        <GitHubIcon className='btn-links'/>
+                    </Link>
                 </span>
             </div>
             
