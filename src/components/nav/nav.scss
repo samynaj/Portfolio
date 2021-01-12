@@ -18,6 +18,18 @@
         display: flex;
         justify-content: space-around;
         color: #00c2cb;
+
+        @media screen and (max-width: 800px){
+            display: none;
+        }
+    }
+
+    .menubook {
+        display: none;
+        @media screen and (max-width: 800px){
+            display: block;
+            color: #00c2cb;
+        }
     }
 }
 
