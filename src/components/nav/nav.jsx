@@ -1,30 +1,50 @@
-// import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import React, {useState} from "react"
 import './nav.scss';
-// import HomeIcon from '@material-ui/icons/Home';
-// import PeopleIcon from '@material-ui/icons/People';
-// import ExplicitIcon from '@material-ui/icons/Explicit';
-// import GitHubIcon from '@material-ui/icons/GitHub';
-// import CallIcon from '@material-ui/icons/Call';
-// import { Link } from 'react-router-dom';
-// import Tooltip from '@material-ui/core/Tooltip';
+import HomeIcon from '@material-ui/icons/Home';
+import PeopleIcon from '@material-ui/icons/People';
+import PersonIcon from '@material-ui/icons/Person';
+import AppsIcon from '@material-ui/icons/Apps';
+import CallIcon from '@material-ui/icons/Call';
 import AppBar from '@material-ui/core/AppBar';
 import ToolBar from '@material-ui/core/ToolBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link"
+import Link from "@material-ui/core/Link";
+import Box from "@material-ui/core/Box";
+import Avatar from "@material-ui/core/Avatar";
+import Divider from "@material-ui/core/Divider"
+import Coder from "../../resources/coder.jpg"
+import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import MenuSlideRight from "@material-ui/core/Drawer"
+
 
 const useStyles = makeStyles(theme => ({
   menuButton: {
-    marginRight: theme.spacing(2),
+    fontSize: "3rem"
   },
   appbar: {
     backgroundColor: "#111822"
   },
+  sliderContainer: {
+    width: 250,
+    background: '#111822',
+    height: "100%",
+
+  },
+  avatar: {
+    display: "block",
+    margin: "0.5rem auto",
+    width: theme.spacing(13),
+    height: theme.spacing(13)
+  },
+  listItem: {
+    color: '#00c2cb'
+  }
   
 }))
 
@@ -38,11 +58,66 @@ const HideOnScroll = (props) => {
     </Slide>
   )
 }
+const menuItems = [
+  {
+    listIcon: <HomeIcon />,
+    listText: "Home",
+    href: "#home"
+  },
+  {
+    listIcon: <PersonIcon />,
+    listText: "About",
+    href: "#about"
+  },
+  {
+    listIcon: <AppsIcon />,
+    listText: "Projects",
+    href: "#projects"
+  },
+  {
+    listIcon: <PeopleIcon />,
+    listText: "Testimonials",
+    href: "#testimony"
+  },
+  {
+    listIcon: <CallIcon />,
+    listText: "Contacts",
+    href: "#contact"
+  }
+]
 
 const Navbar = (props) => {
+  const [state, setState] = useState({
+    right: false
+  });
   const classes = useStyles();
+
+  const toggleSlide = (slider, open) => () =>  {
+    setState({...state, [slider]: open})
+  } 
+
+  const sideBar = slider => ( 
+    <Box className={classes.sliderContainer} component="div" onClick={toggleSlide(slider, false)}>
+      <Avatar className={classes.avatar} src={Coder} alt="coder"/>
+      <Divider />
+      <List>
+        { menuItems.map((item, key) => (
+          <Link href={item.href} key={key} >
+            <ListItem button>
+              <ListItemIcon className={classes.listItem}>
+                {item.listIcon}
+              </ListItemIcon>
+              <ListItemText className={classes.listItem} primary={item.listText} />
+            </ListItem>
+          </Link>
+        ))}
+      </List>
+    </Box>
+  )
+
   return (
     <div className='sidebar'>
+
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar className={classes.appbar}>
@@ -66,42 +141,16 @@ const Navbar = (props) => {
               <Link href="#contact" color="inherit">
                 <Button color="inherit">Contact</Button>
               </Link>
-              
             </div>
-            
+            <IconButton className="menubook" onClick={toggleSlide("right", true)}>
+              <MenuBookIcon className={classes.menuButton} />
+            </IconButton>
+            <MenuSlideRight anchor="right" open={state.right} onClose={toggleSlide("right", false)}>
+              {sideBar("right")}
+            </MenuSlideRight>
           </ToolBar>
         </AppBar>
       </HideOnScroll>
-
-      {/* <ProSidebar width='80px'>
-        <Menu className='menu'>
-          <Tooltip title='Home' placement='right'>
-            <MenuItem icon={<HomeIcon/>}>
-              <Link to='/'/>
-            </MenuItem>
-          </Tooltip>
-          <Tooltip title='About' placement='right'>
-            <MenuItem icon={<PeopleIcon/>}>
-              <Link to='/about'/>
-            </MenuItem>
-          </Tooltip>
-          <Tooltip title='Experience' placement='right'>
-            <MenuItem icon={<ExplicitIcon/>}>
-              <Link to='/experience'/>
-            </MenuItem>
-          </Tooltip>
-          <Tooltip title='Projects' placement='right'>
-            <MenuItem icon={<GitHubIcon/>}>
-              <Link to='/projects'/>
-            </MenuItem>
-          </Tooltip>
-          <Tooltip title='Contacts' placement='right'>
-            <MenuItem icon={<CallIcon/>}>
-              <Link to='/contacts'/>
-            </MenuItem>
-          </Tooltip>
-        </Menu>
-      </ProSidebar> */}
     </div>
     
   )
