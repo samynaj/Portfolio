@@ -7,6 +7,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import BlockRevealAnimation from 'react-block-reveal-animation';
+import snow from "../../resources/snow-clothing.PNG";
+import dice from "../../resources/dice-game.PNG";
+import buy from "../../resources/buy-coins.PNG"
 
 import './projects.scss'
 
@@ -42,7 +45,7 @@ const Projects = () => {
                         <CardMedia
                         component="img"
                         className={classes.media}
-                        image="http://free.pagepeeker.com/v2/thumbs.php?size=x&url=http%3A%2F%2Fsnow-live.herokuapp.com"
+                        image={snow}
                         title="Snow Clothing"
                         />
                         <CardContent>
@@ -65,7 +68,7 @@ const Projects = () => {
                         <CardMedia
                         component="img"
                         className={classes.media}
-                        image="http://free.pagepeeker.com/v2/thumbs.php?size=x&url=https%3A%2F%2Fsamynaj.github.io%2FDice-game"
+                        image={dice}
                         title="Snow Clothing"
                         />
                         <CardContent>
@@ -88,7 +91,7 @@ const Projects = () => {
                         <CardMedia
                         component="img"
                         className={classes.media}
-                        image="http://free.pagepeeker.com/v2/thumbs.php?size=x&url=https%3A%2F%2Fsamynaj.github.io%2FBuycoins-table"
+                        image={buy}
                         title="Snow Clothing"
                         />
                         <CardContent>
